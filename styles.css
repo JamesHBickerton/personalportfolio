@@ -1,0 +1,738 @@
+/*
+
+--- 01 TYPOGRAPHY SYSTEM 
+
+- Font sizes (px): 
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights: 
+Default: 400
+
+Line heights: 
+Default: 1
+
+--- 02 COLOURS 
+
+- Primary: #e67e22
+- Tints: 
+- Shades: 
+- Accents: 
+- Greys: #555
+
+--- 03 IMAGES 
+
+--- 04 ICONS 
+
+--- 05 SHADOWS 
+
+--- 06 BORDER-RADIUS 
+
+--- 07 WHITE-SPACE 
+
+- Spacing sizes (px) 
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/* Generic Styling */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2efe7;
+  color: #071111;
+  font-family: "Inter", "sans-serif";
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.grid--2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3.2rem;
+}
+
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+}
+
+.helpContainer {
+  padding-left: 10.4rem;
+  padding-right: 20.4rem;
+}
+
+.boldText {
+  font-weight: 600;
+  color: #48a6a7;
+}
+
+/* NAV Section */
+
+.navContainer {
+  background-color: #48a6a7;
+  padding-top: 0.6rem;
+  position: relative;
+}
+
+.JLogo {
+  position: absolute;
+  left: 14px;
+  top: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1rem;
+  padding-right: 2rem;
+  height: 40px;
+}
+
+.navbarLink,
+.navbarLink:visited {
+  text-decoration: none;
+  color: #f2efe7;
+  cursor: pointer;
+  font-family: "Montserrat", roboto;
+  text-transform: uppercase;
+}
+
+.navbarLink:hover,
+.navbarLink:active {
+  color: #c2bfb9;
+}
+
+/* HERO Section */
+
+.heroSection {
+  padding-top: 6rem;
+  height: 100vh;
+  width: 100vw;
+
+  background: hsla(44, 30%, 93%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(44, 30%, 93%, 1) 70%,
+    hsla(181, 40%, 47%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(44, 30%, 93%, 1) 70%,
+    hsla(181, 40%, 47%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(44, 30%, 93%, 1) 70%,
+    hsla(181, 40%, 47%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#f2efe7", endColorstr="#48A6A7", GradientType=1 );
+}
+
+.displayIMG {
+  border: 4px solid #245354;
+  border-radius: 50%;
+  box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.09);
+}
+
+.headerText {
+  color: #245354;
+  margin-bottom: 1.2rem;
+  font-family: "Montserrat", roboto;
+  font-size: 4.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #071111;
+  border-bottom-style: dotted;
+}
+
+.headerParagraph {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin-bottom: 1.6rem;
+  line-height: 2rem;
+}
+
+.logos {
+  display: flex;
+  gap: 0.8rem;
+  margin-left: 1.6rem;
+  align-items: center;
+}
+
+.logo-icon {
+  color: #245354;
+  height: 30px;
+  width: 30px;
+}
+
+.logo-icon:link,
+.logo-icon:visited {
+  cursor: pointer;
+}
+
+.logo-icon:hover,
+.logo-icon:active {
+  color: #48a6a7;
+  transition: all 0.8s;
+}
+
+/* SKILLS Section */
+
+.skills {
+  background-color: #245354 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillsHeading {
+  color: #f2efe7 !important;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", Roboto;
+  font-size: 3rem;
+}
+
+.skill-icon {
+  /* color: #f2efe7; */
+  color: #7fc1c1;
+  height: 30px;
+  width: 30px;
+  margin-right: 2rem;
+}
+
+/* ABOUT Section */
+
+.aboutSection {
+  margin-right: 6.4rem;
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.aboutSecondaryTitle {
+  color: #071111;
+  font-family: "Inter", "sans-serif";
+  font-weight: 400;
+}
+
+.aboutSectionIMG1 {
+  grid-row: 1;
+  border-bottom: 4px none var(--brand-identity--tea-green);
+  border-top-right-radius: 120px;
+  border-bottom-right-radius: 120px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  object-fit: cover;
+
+  box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.04);
+}
+
+.aboutList {
+  padding-top: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 200;
+  list-style: none;
+  line-height: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* PROJECTS section */
+
+.projectSection {
+  background-color: #245354;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  margin-bottom: 6.4rem;
+
+  position: relative;
+}
+
+.MoreToCome {
+  font-size: 1.4rem;
+  font-family: "Shadows Into Light Two";
+  font-weight: 700;
+  width: 6.4rem;
+  color: #7fc1c1;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+
+  position: absolute;
+  top: 36px;
+  right: 210px;
+
+  transform: rotate(30deg);
+}
+
+.projectHeading {
+  color: #f2efe7 !important;
+  font-family: "Montserrat", Roboto;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  /* border-bottom: 2px solid #7fc1c1;
+  border-bottom-style: dotted; */
+}
+
+.projectSection img {
+  border-radius: 10px;
+}
+
+.projectSection img:hover {
+  cursor: pointer;
+}
+
+.projectDescription {
+  text-align: center;
+  padding-top: 1.2rem;
+}
+
+.projectDescription a {
+  color: #7fc1c1 !important;
+  font-family: "Montserrat", Roboto;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.projectDescription a:link,
+.projectDescription a:active {
+  cursor: pointer;
+}
+
+.projectDescription a:hover,
+.projectDescription a:visited {
+  color: white;
+}
+
+/* RESUME Section */
+
+.navResumeContainer {
+  background-color: #48a6a7;
+  padding-top: 0.6rem;
+  position: relative;
+}
+
+.resumeSection {
+  padding-top: 6rem;
+  height: 36vh;
+
+  background: hsla(44, 30%, 93%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(44, 30%, 93%, 1) 70%,
+    hsla(181, 40%, 47%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(44, 30%, 93%, 1) 70%,
+    hsla(181, 40%, 47%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(44, 30%, 93%, 1) 70%,
+    hsla(181, 40%, 47%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#f2efe7", endColorstr="#48A6A7", GradientType=1 );
+}
+
+.resumeContainer {
+  background-color: #f2efe7;
+}
+
+.resumeHeading {
+  color: #48a6a7 !important;
+  margin-bottom: 1.2rem;
+  font-family: "Montserrat", Roboto;
+  font-size: 2.8rem;
+}
+
+.resumeText {
+  color: #245354;
+  margin-bottom: 1.8rem;
+  font-family: "Montserrat", roboto;
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+.resumeListSection {
+  padding-bottom: 4.8rem;
+}
+
+.resumeSummary p:last-child {
+  padding-bottom: 2.4rem;
+}
+
+.resumeList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  list-style: none;
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin-bottom: 1.6rem;
+  line-height: 2rem;
+}
+
+.resumeClosingHeader {
+  color: #245354;
+  font-family: "Montserrat", roboto;
+  font-size: 4.8rem;
+  font-weight: 700;
+  padding: 6.4rem;
+  padding-bottom: 3.2rem;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.modal {
+  background-color: #48a6a7 !important;
+}
+
+.resumeLink {
+  text-decoration: none;
+  color: #245354 !important;
+}
+
+.coffeeIMG {
+  box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.04);
+}
+
+.emailButton {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-resume {
+  padding: 0.8rem;
+  border-radius: 500px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* letter-spacing: 0.2rem; */
+
+  display: flex;
+  align-items: center;
+  border: unset;
+}
+
+.btn-resume:link,
+.btn-resume:visited {
+  color: #245354;
+  font-family: "Montserrat", roboto;
+}
+
+.btn-resume:hover,
+.btn-resume:active {
+  background-color: #3a6465;
+  color: #f2efe7;
+}
+
+.skill-icon-resume {
+  color: #7fc1c1;
+  height: 30px;
+  width: 30px;
+}
+
+/* FOOTER Section */
+
+.bottom-container {
+  background-color: #48a6a7;
+  padding: 50px 0 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link,
+.footer-link:visited {
+  color: #245354;
+  font-family: "Montserrat", roboto;
+  margin: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+
+  transition: all(1s);
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #f2efe7;
+}
+
+.copyright {
+  background-color: #48a6a7;
+  color: #f2efe7;
+  font-family: "Montserrat", roboto;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  padding-bottom: 20px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1400px) {
+  .MoreToCome {
+    right: 110px;
+  }
+
+  .helpContainer {
+    padding-left: 5.2rem;
+    padding-right: 10.2rem;
+  }
+}
+
+@media (max-width: 1229px) {
+  .resumeClosingHeader {
+    font-size: 2.4rem;
+    padding: 4.8rem;
+  }
+}
+
+@media (max-width: 1170px) {
+  .grid--2-cols {
+    gap: 10px;
+  }
+
+  .aboutSectionIMG1 {
+    height: 100vh;
+  }
+
+  .MoreToCome {
+    right: 100px;
+  }
+
+  .btn-resume {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1086px) {
+  .headerText,
+  .resumeHeading {
+    font-size: 2.4rem;
+  }
+
+  .headerParagraph,
+  .aboutList,
+  .resumeList {
+    font-size: 1.2rem;
+  }
+
+  .aboutSection {
+    margin-right: 1.2rem;
+  }
+
+  .aboutSecondaryTitle {
+    font-size: 1.4rem;
+  }
+
+  .grid--2-cols {
+    gap: 10px;
+    margin-right: 0;
+  }
+
+  .aboutSectionIMG1 {
+    height: 80%;
+  }
+
+  .resumeClosingHeader {
+    padding-bottom: 1.6rem;
+  }
+
+  .skill-icon-resume {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn-resume {
+    font-size: 0.6rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .headerSection {
+    margin-top: 0;
+  }
+
+  .skills {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 895px) {
+  .aboutSectionIMG1 {
+    height: 100%;
+    width: 100%;
+
+    grid-column: 1 / -1;
+  }
+
+  .aboutParagraph {
+    grid-column: 1 / 3;
+    padding: 2.4rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .navbar {
+    gap: 1rem;
+  }
+  .navbarLink {
+    font-size: 0.6rem;
+  }
+  .headerParagraph {
+    font-size: 0.8rem;
+  }
+  .MoreToCome {
+    right: 50px;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .GoogleHomeIMG {
+    width: 100%;
+
+    grid-column: 2 / 3;
+  }
+
+  .GoogleDriveIMG {
+    width: 100%;
+
+    grid-column: 2 / 3;
+  }
+
+  .OmnifoodIMG {
+    width: 100%;
+
+    grid-column: 2 / 3;
+  }
+
+  .helpContainer {
+    padding-left: 2.2rem;
+    padding-right: 5.1rem;
+  }
+
+  .resumeText {
+    font-size: 3.2rem;
+  }
+
+  .resumeList {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .resumeHeading {
+    font-size: 1.4rem;
+  }
+
+  .resumeClosingHeader {
+    font-size: 1.4rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .skill-icon-resume {
+    width: 10px;
+    height: 10px;
+  }
+
+  .btn-resume {
+    font-size: 0.5rem;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 655px) {
+  .MoreToCome {
+    right: 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 542px) {
+  .GoogleHomeIMG,
+  .GoogleDriveIMG,
+  .OmnifoodIMG {
+    width: 80%;
+    height: 100%;
+  }
+
+  .resumeListSection {
+    width: 100%;
+  }
+  .resumeList {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .resumeClosingHeader {
+    font-size: 1rem;
+    padding-bottom: 0rem;
+    padding-top: 2.4rem;
+  }
+
+  .skill-icon-resume {
+    width: 8px;
+    height: 8px;
+  }
+
+  .btn-resume {
+    font-size: 0.4rem;
+    padding: 0.2rem;
+  }
+}
+
+@media (max-width: 488px) {
+  /* .MoreToCome {
+    font-size: 0.4rem;
+    right: 100px;
+  } */
+
+  .resumeClosingHeader {
+    font-size: 1rem;
+    padding-bottom: 1.2rem;
+    padding-top: 1.2rem;
+  }
+
+  .resumeList {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 488px) {
+  .resumeClosingHeader {
+    font-size: 1rem;
+    padding-bottom: 0rem;
+    padding-top: 1.2rem;
+  }
+}
